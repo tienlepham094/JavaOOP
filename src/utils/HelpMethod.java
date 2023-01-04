@@ -6,10 +6,10 @@ import java.util.Date;
 
 public class HelpMethod {
     private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyyy");
-    public  String formatDate(Date date){
+    public static String formatDate(Date date){
         return dateFormatter.format(date);
     }
-    public Date stringToDate(String dateString) throws ParseException {
+    public static Date stringToDate(String dateString) throws ParseException {
         return dateFormatter.parse(dateString);
     }
     public static boolean isNumeric(String strNum) {
