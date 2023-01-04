@@ -10,13 +10,13 @@ public class NhanVienBienChe extends NhanVien {
 
     public NhanVienBienChe(double luongCoBan, double gioLamThem) {
         this.luongCoBan = luongCoBan;
-        this.gioLamThem = gioLamThem;
+        this.gioLamThem = 0;
     }
 
     public NhanVienBienChe(String ten, String soCMT, String donvi, Date tgBatDauLam, double luongCoBan, double gioLamThem) {
         super(ten, soCMT, donvi, tgBatDauLam);
         this.luongCoBan = luongCoBan;
-        this.gioLamThem = gioLamThem;
+        this.gioLamThem = 0;
     }
 
     @Override
@@ -29,6 +29,9 @@ public class NhanVienBienChe extends NhanVien {
         System.out.println("Luong: " + tinhLuong());
     }
 
+    public void nhapLuong(){
+        // nhập giờ làm thêm
+    }
     public double getLuongCoBan() {
         return luongCoBan;
     }

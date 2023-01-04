@@ -7,12 +7,12 @@ public class NhanVienThoiVu extends NhanVien {
     private final double TIEN_BH = 200000;
 
     public NhanVienThoiVu(int tongBaoHiem) {
-        this.tongBaoHiem = tongBaoHiem;
+        this.tongBaoHiem = 0;
     }
 
     public NhanVienThoiVu(String ten, String soCMT, String donvi, Date tgBatDauLam, int tongBaoHiem) {
         super(ten, soCMT, donvi, tgBatDauLam);
-        this.tongBaoHiem = tongBaoHiem;
+        this.tongBaoHiem = 0;
     }
 
     @Override
@@ -24,7 +24,9 @@ public class NhanVienThoiVu extends NhanVien {
         System.out.println(this.toString());
         System.out.println("Tien Luong: " + tinhLuong());
     }
-
+    public void nhapLuong(){
+        // nhập số hợp đồng
+    }
     public int getTongBaoHiem() {
         return tongBaoHiem;
     }

@@ -19,6 +19,7 @@ public abstract class NhanVien {
     }
 
     public abstract double tinhLuong();
+    public abstract void nhapLuong();
     public void inTT(){
         System.out.println(this.toString());
     }

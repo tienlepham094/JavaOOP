@@ -2,6 +2,7 @@ package utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class HelpMethod {
@@ -50,5 +51,14 @@ public class HelpMethod {
         }
         return true;
     }
-
+    public static boolean compareMonthYear(Date date, String monthYear){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        String [] items = monthYear.split("/");
+        if((cal.get(Calendar.MONTH) + 1) <= Integer.parseInt(items[0]) && cal.get(Calendar.YEAR)
+                <= Integer.parseInt(items[1])){
+            return true;
+        }
+        else return false;
+    }
 }

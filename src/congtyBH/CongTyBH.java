@@ -71,4 +71,20 @@ public class CongTyBH {
 
         }
     }
+
+    public void tinhLuongTB(){
+        double luongTB = pql.tinhLuongTB();
+        if(luongTB==0){
+            System.out.println("Chưa có thông tin về giờ làm thêm và số hợp đồng tháng này");
+            System.out.println("Vui lòng nhập đẩy đủ các thông tin trên");
+        }else{
+            System.out.println("Lương TB của tất cả các nhân viên thời điểm hiện tại : " + luongTB);
+        }
+    }
+    public void nhapLuongHangThang(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");
+        String monthYear = sc.nextLine();
+        pql.nhapLuongTheoThang(monthYear);
+    }
 }
