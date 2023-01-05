@@ -9,13 +9,10 @@ public class PhongQuanLy {
     private int soNV;
     private PhongTaiChinh ptc;
     private ArrayList<NhanVien> dsNV;
-    private Hashtable<String, ArrayList<NhanVien>> dsTheoThang;
-
 
     public PhongQuanLy() {
         this.soNV = 0;
         this.dsNV = new ArrayList<>();
-        this.dsTheoThang = new Hashtable<String, ArrayList<NhanVien>>();
         this.ptc = new PhongTaiChinh();
     }
     // them, sua, xoa nhan vien
@@ -50,54 +47,52 @@ public class PhongQuanLy {
         }
         return result;
     }
-    // tinhLuongTB
-    public double tinhLuongTB(){
-        Date dateNow = new Date();
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(dateNow);
-        String monthYear = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR);
 
-        Set<String> keys =dsTheoThang.keySet();
-        for(String key: keys){
-            if(Objects.equals(key, monthYear)){
-                ArrayList<NhanVien> dsach = dsTheoThang.get(key);
-                int total = dsach.size();
-                double sum = 0;
-                for(NhanVien nv: dsach){
-                    sum += nv.tinhLuong();
-                }
-                return sum/total;
-            }
-            }
-        return 0;
-        }
+//    public void layDSTheoThang(String monthYear){
+//            ArrayList<NhanVien> ds = new ArrayList<>();
+//            for (NhanVien nv : dsNV){
+//                if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
+//                    ds.add(nv);
+//                }
+//            }
+//            if(ds.size()==0){
+//                System.out.println("Chưa có dữ liệu nhân viên");
+//            }else{
+//                dsTheoThang.put(monthYear, ds);
+//            }
+//
+//
+//    }
 
-
-
-
-        // nhap luong theo thang
-    public void nhapLuongTheoThang(String monthYear){
-        Set<String> keys =dsTheoThang.keySet();
-        for(String key: keys){
-            if(Objects.equals(key, monthYear)){
-                ptc.nhapLuongTheoThang(dsTheoThang.get(key));
-            }
-        }
+    public int getSoNV() {
+        return soNV;
     }
-    public void themSuaDSTheoThang(String monthYear){
-            ArrayList<NhanVien> ds = new ArrayList<>();
-            for (NhanVien nv : dsNV){
-                if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
-                    ds.add(nv);
-                }
-            }
-            if(ds.size()==0){
-                System.out.println("Chưa có dữ liệu nhân viên");
-            }else{
-                dsTheoThang.put(monthYear, ds);
-            }
 
-
+    public void setSoNV(int soNV) {
+        this.soNV = soNV;
     }
-    // thong ke thonh tin va muc luong theo thang
+
+    public PhongTaiChinh getPtc() {
+        return ptc;
+    }
+
+    public void setPtc(PhongTaiChinh ptc) {
+        this.ptc = ptc;
+    }
+
+    public ArrayList<NhanVien> getDsNV() {
+        return dsNV;
+    }
+
+    public void setDsNV(ArrayList<NhanVien> dsNV) {
+        this.dsNV = dsNV;
+    }
+
+//    public Hashtable<String, ArrayList<NhanVien>> getDsTheoThang() {
+//        return dsTheoThang;
+//    }
+//
+//    public void setDsTheoThang(Hashtable<String, ArrayList<NhanVien>> dsTheoThang) {
+//        this.dsTheoThang = dsTheoThang;
+//    }
 }

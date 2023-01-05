@@ -10,10 +10,12 @@ import java.util.Scanner;
 
 public class CongTyBH {
     private PhongQuanLy pql;
+    private PhongTaiChinh ptc;
     private String tenCongTy;
 
     public CongTyBH(String tenCongTy) {
         this.pql = new PhongQuanLy();
+        this.ptc = new PhongTaiChinh();
         this.tenCongTy = tenCongTy;
     }
 
@@ -73,7 +75,7 @@ public class CongTyBH {
     }
 
     public void tinhLuongTB(){
-        double luongTB = pql.tinhLuongTB();
+        double luongTB = ptc.tinhLuongTB(pql.getDsNV());
         if(luongTB==0){
             System.out.println("Chưa có thông tin về giờ làm thêm và số hợp đồng tháng này");
             System.out.println("Vui lòng nhập đẩy đủ các thông tin trên");
@@ -85,6 +87,11 @@ public class CongTyBH {
         Scanner sc = new Scanner(System.in);
         System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");
         String monthYear = sc.nextLine();
-        pql.nhapLuongTheoThang(monthYear);
+        ptc.nhapLuongTheoThang(monthYear, pql.getDsNV());
+    }
+    public void thongKeLuong(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");
+        String monthYear = sc.nextLine();
     }
 }

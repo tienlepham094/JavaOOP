@@ -1,19 +1,46 @@
 package congtyBH;
 
 import nhanvien.NhanVien;
+import utils.HelpMethod;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class PhongTaiChinh {
 
-
-    public void nhapLuongTheoThang(ArrayList<NhanVien> dsNV){
+    public double tinhLuongTB(ArrayList<NhanVien> dsNV){
+        Date dateNow = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(dateNow);
+        String monthYear = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR);
+        double sum = 0;
+        int count = 0;
         for(NhanVien nv: dsNV){
-            nv.nhapLuong();
+            if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
+                count++;
+            }
         }
+
+        return sum/count;
+    }
+    // nhap luong theo thang
+    public void nhapLuongTheoThang(String monthYear,ArrayList<NhanVien> dsNV){
+        for (NhanVien nv : dsNV) {
+            if (HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)) {
+                nv.nhapLuong(monthYear);
+            }
+        }
+
     }
 
-    public void inLuongTheoThang(String thangnam, ArrayList<NhanVien> dsNV){}
+
+
+    public void inLuongTheoThang(String monthYear, ArrayList<NhanVien> dsNV){
+        for(NhanVien nv: dsNV){
+            if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
+                nv.nhapLuong(monthYear);
+            }
+        }
+    }
 
 
 }

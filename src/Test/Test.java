@@ -1,12 +1,16 @@
 package Test;
+import nhanvien.NhanVien;
+import nhanvien.NhanVienThoiVu;
 import utils.HelpMethod;
 
+import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số ");
 //        String number = sc.nextLine();
@@ -16,6 +20,17 @@ public class Test {
         Calendar cal = Calendar.getInstance();
         cal.setTime(dateNow);
         String monthYear = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR);
-        System.out.println(monthYear);
+//        System.out.println(monthYear);
+        ArrayList<NhanVien> dsnv = new ArrayList<NhanVien>();
+        NhanVien nv1 = new NhanVienThoiVu("Nguyen Van A", "0912344444", "A", HelpMethod.stringToDate("12/12/2002"),
+                3);
+        dsnv.add(nv1);
+        for(NhanVien nv: dsnv){
+            System.out.println(nv.getTen());
+        }
+        nv1.setTen("Nguyen Van B");
+        for(NhanVien nv: dsnv){
+            System.out.println(nv.getTen());
+        }
     }
 }
