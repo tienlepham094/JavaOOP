@@ -19,10 +19,10 @@ public class PhongQuanLy {
     public void themNV(NhanVien nv){
         // viết thêm nè
     }
-    public void XoaNV(NhanVien nv){
+    public void xoaNV(NhanVien nv){
         // viết thêm tiếp
     }
-    public void SuaNV(){
+    public void suaNV(){
 
     }
     // tim kiem nhan vien
@@ -57,21 +57,6 @@ public class PhongQuanLy {
         return result;
     }
 
-//    public void layDSTheoThang(String monthYear){
-//            ArrayList<NhanVien> ds = new ArrayList<>();
-//            for (NhanVien nv : dsNV){
-//                if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
-//                    ds.add(nv);
-//                }
-//            }
-//            if(ds.size()==0){
-//                System.out.println("Chưa có dữ liệu nhân viên");
-//            }else{
-//                dsTheoThang.put(monthYear, ds);
-//            }
-//
-//
-//    }
 
     public int getSoNV() {
         return soNV;
@@ -93,15 +78,4 @@ public class PhongQuanLy {
         return dsNV;
     }
 
-    public void setDsNV(ArrayList<NhanVien> dsNV) {
-        this.dsNV = dsNV;
-    }
-
-//    public Hashtable<String, ArrayList<NhanVien>> getDsTheoThang() {
-//        return dsTheoThang;
-//    }
-//
-//    public void setDsTheoThang(Hashtable<String, ArrayList<NhanVien>> dsTheoThang) {
-//        this.dsTheoThang = dsTheoThang;
-//    }
 }

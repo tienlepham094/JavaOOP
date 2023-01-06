@@ -118,6 +118,6 @@ public abstract class NhanVien {
     public void setTgBatDauLam(Date tgBatDauLam) {
         this.tgBatDauLam = tgBatDauLam;
     }
-       public void setLuongTungThang(String monthYear, double luong){
+    public void setLuongTungThang(String monthYear, double luong){
         luongTungThang.put(monthYear, luong);}
 }

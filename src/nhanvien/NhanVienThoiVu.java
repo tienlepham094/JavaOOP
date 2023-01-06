@@ -36,7 +36,7 @@ public class NhanVienThoiVu extends NhanVien {
                 System.out.println("Nhập số hợp đồng bảo hiểm bán được chưa hợp lệ");
             }
         }
-        // nhập giờ làm thêm
+
 
     }
 
