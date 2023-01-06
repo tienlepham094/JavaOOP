@@ -16,6 +16,15 @@ public class PhongQuanLy {
         this.ptc = new PhongTaiChinh();
     }
     // them, sua, xoa nhan vien
+    public void themNV(NhanVien nv){
+        // viết thêm nè
+    }
+    public void XoaNV(NhanVien nv){
+        // viết thêm tiếp
+    }
+    public void SuaNV(){
+
+    }
     // tim kiem nhan vien
     public ArrayList<NhanVien> timKiem(String ten){
 

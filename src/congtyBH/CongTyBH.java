@@ -1,6 +1,8 @@
 package congtyBH;
 
 import nhanvien.NhanVien;
+import nhanvien.NhanVienBienChe;
+import nhanvien.NhanVienThoiVu;
 import utils.HelpMethod;
 
 import java.text.ParseException;
@@ -18,7 +20,32 @@ public class CongTyBH {
         this.ptc = new PhongTaiChinh();
         this.tenCongTy = tenCongTy;
     }
-
+    public void themNhanVien() throws ParseException {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Chọn loại nhân viên bạn muốn thêm");
+        System.out.println("1. Nhân viên biên chế");
+        System.out.println("2. Nhân viên hợp đồng");
+        System.out.println("Lựa chọn của bạn: ");
+        int choice = Integer.parseInt(sc.nextLine());
+        switch (choice) {
+            case 1:
+                NhanVien nv = new NhanVienBienChe();
+                nv.nhapTT();
+                pql.themNV(nv);
+                nv.inTT();
+                break;
+            case 2:
+                NhanVien nv1 = new NhanVienThoiVu();
+                nv1.nhapTT();
+                pql.themNV(nv1);
+                nv1.nhapTT();
+                break;
+            default:
+                System.out.println("Lựa chọn của bạn ko hợp lệ");
+                break;
+        }
+    }
+    // tìm kiếm
     public void timKiem() throws ParseException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Mời nhập lựa chọn" + "\n" +
@@ -74,6 +101,8 @@ public class CongTyBH {
         }
     }
 
+
+    // tính lương TB tại thời điểm hiện tại
     public void tinhLuongTB(){
         double luongTB = ptc.tinhLuongTB(pql.getDsNV());
         if(luongTB==0){
@@ -83,12 +112,16 @@ public class CongTyBH {
             System.out.println("Lương TB của tất cả các nhân viên thời điểm hiện tại : " + luongTB);
         }
     }
+
+    // nhập lương của nhân viên theo tháng
     public void nhapLuongHangThang(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");
         String monthYear = sc.nextLine();
         ptc.nhapLuongTheoThang(monthYear, pql.getDsNV());
     }
+
+    // thống kê luong tại một thời điểm bất kì
     public void thongKeLuong(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");

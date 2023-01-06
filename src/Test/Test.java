@@ -1,6 +1,7 @@
 package Test;
 import congtyBH.CongTyBH;
 import nhanvien.NhanVien;
+import nhanvien.NhanVienBienChe;
 import nhanvien.NhanVienThoiVu;
 import utils.HelpMethod;
 
@@ -34,6 +35,9 @@ public class Test {
 //            System.out.println(nv.getTen());
 //        }
         CongTyBH ct = new CongTyBH("công ty");
+        NhanVien nv = new NhanVienBienChe();
+        nv.nhapTT();
+
 
     }
 }

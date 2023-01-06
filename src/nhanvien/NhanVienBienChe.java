@@ -14,6 +14,7 @@ public class NhanVienBienChe extends NhanVien {
     private final double TIEN_LUONG_LT = 200000;
 //    private Hashtable<String, Double> luongTungThang;
 
+    public NhanVienBienChe(){};
     public NhanVienBienChe(String ten, String soCMT, String donvi, Date tgBatDauLam, double luongCoBan) {
         super(ten, soCMT, donvi, tgBatDauLam);
         this.luongCoBan = luongCoBan;

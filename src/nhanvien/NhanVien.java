@@ -56,7 +56,7 @@ public abstract class NhanVien {
 
         System.out.print("Nhập đon vị: ");
         String donVi = sc.nextLine();
-
+        setDonvi(donVi);
         while(true){
             System.out.print("Nhập thời gian bắt đầu làm : ");
             String tgBatDauLam = sc.nextLine();

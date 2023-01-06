@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class NhanVienThoiVu extends NhanVien {
     private final double TIEN_BH = 200000;
     private int soHopDongBan;
+    public NhanVienThoiVu(){};
     public NhanVienThoiVu(String ten, String soCMT, String donvi, Date tgBatDauLam) {
         super(ten, soCMT, donvi, tgBatDauLam);
         this.soHopDongBan = 0;
