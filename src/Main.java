@@ -1,10 +1,13 @@
 import congtyBH.CongTyBH;
 
 import java.text.ParseException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
         CongTyBH cty = new CongTyBH("Công ty Bảo hiểm");
+        Scanner sc = new Scanner(System.in);
+
 
     }
     public static void showMenu(){

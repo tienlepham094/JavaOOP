@@ -37,7 +37,7 @@ public class PhongTaiChinh {
     public void inLuongTheoThang(String monthYear, ArrayList<NhanVien> dsNV){
         for(NhanVien nv: dsNV){
             if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
-                nv.nhapLuong(monthYear);
+                nv.inLuong(monthYear);
             }
         }
     }

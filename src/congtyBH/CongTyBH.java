@@ -93,5 +93,6 @@ public class CongTyBH {
         Scanner sc = new Scanner(System.in);
         System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");
         String monthYear = sc.nextLine();
+        ptc.inLuongTheoThang(monthYear, pql.getDsNV());
     }
 }

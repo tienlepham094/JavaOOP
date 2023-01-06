@@ -2,6 +2,7 @@ package nhanvien;
 
 import utils.HelpMethod;
 
+import java.text.ParseException;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Scanner;
@@ -11,13 +12,12 @@ public class NhanVienBienChe extends NhanVien {
     private double gioLamThem;
     private final double TIEN_LUONG_CB = 2000000;
     private final double TIEN_LUONG_LT = 200000;
-    private Hashtable<String, Double> luongTungThang;
+//    private Hashtable<String, Double> luongTungThang;
 
-    public NhanVienBienChe(String ten, String soCMT, String donvi, Date tgBatDauLam, double luongCoBan, double gioLamThem) {
+    public NhanVienBienChe(String ten, String soCMT, String donvi, Date tgBatDauLam, double luongCoBan) {
         super(ten, soCMT, donvi, tgBatDauLam);
         this.luongCoBan = luongCoBan;
         this.gioLamThem = 0;
-        luongTungThang = new Hashtable<>();
     }
 
     @Override
@@ -26,7 +26,7 @@ public class NhanVienBienChe extends NhanVien {
     }
     public void inTT(){
         super.inTT();
-        System.out.println("Luong: " + tinhLuong());
+        System.out.println("Lương cơ bản: " + luongCoBan);
     }
 
     public void nhapLuong(String monthYear){
@@ -44,7 +44,7 @@ public class NhanVienBienChe extends NhanVien {
         }
 
     }
-    public void nhapTT() {
+    public void nhapTT() throws ParseException {
         super.nhapTT();
         while (true){
             System.out.print("Nhập lương cơ bản: ");
@@ -60,10 +60,7 @@ public class NhanVienBienChe extends NhanVien {
             }
         }
     }
-   public void setLuongTungThang(String monthYear, double luong){
-        luongTungThang.put(monthYear, luong);
 
-   }
     public double getLuongCoBan() {
         return luongCoBan;
     }

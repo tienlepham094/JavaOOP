@@ -12,6 +12,7 @@ public abstract class NhanVien {
     private String soCMT;
     private String donvi;
     private Date tgBatDauLam;
+    private Hashtable<String, Double> luongTungThang;
     public NhanVien() {
     }
 
@@ -20,6 +21,7 @@ public abstract class NhanVien {
         this.soCMT = soCMT;
         this.donvi = donvi;
         this.tgBatDauLam = tgBatDauLam;
+        luongTungThang = new Hashtable<>();
     }
 
     public abstract double tinhLuong();
@@ -73,7 +75,18 @@ public abstract class NhanVien {
         System.out.println("Đơn vị: " + getDonvi());
         System.out.println("Thời gian bắt đầu làm: " + HelpMethod.formatDate(getTgBatDauLam()));
     }
+    public void inLuong(String monthYear){
+        if(luongTungThang.containsKey(monthYear)){
+            double luong = luongTungThang.get(monthYear);
+            System.out.println("Tên nhân viên: " + getTen());
+            System.out.println("Lương tháng " + monthYear + " : " + luong);
+        }else{
+            System.out.println("Chưa tồn tại dữ liệu về lương tháng " + monthYear);
+            System.out.println("Vui lòng nhập thông tin trước khi tìm kiếm !");
+        }
 
+
+    }
     public String getTen() {
         return ten;
     }
@@ -105,4 +118,6 @@ public abstract class NhanVien {
     public void setTgBatDauLam(Date tgBatDauLam) {
         this.tgBatDauLam = tgBatDauLam;
     }
+       public void setLuongTungThang(String monthYear, double luong){
+        luongTungThang.put(monthYear, luong);}
 }

@@ -1,4 +1,5 @@
 package Test;
+import congtyBH.CongTyBH;
 import nhanvien.NhanVien;
 import nhanvien.NhanVienThoiVu;
 import utils.HelpMethod;
@@ -21,16 +22,18 @@ public class Test {
         cal.setTime(dateNow);
         String monthYear = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR);
 //        System.out.println(monthYear);
-        ArrayList<NhanVien> dsnv = new ArrayList<NhanVien>();
-        NhanVien nv1 = new NhanVienThoiVu("Nguyen Van A", "0912344444", "A", HelpMethod.stringToDate("12/12/2002"),
-                3);
-        dsnv.add(nv1);
-        for(NhanVien nv: dsnv){
-            System.out.println(nv.getTen());
-        }
-        nv1.setTen("Nguyen Van B");
-        for(NhanVien nv: dsnv){
-            System.out.println(nv.getTen());
-        }
+//        ArrayList<NhanVien> dsnv = new ArrayList<NhanVien>();
+//        NhanVien nv1 = new NhanVienThoiVu("Nguyen Van A", "0912344444", "A", HelpMethod.stringToDate("12/12/2002"),
+//                3);
+//        dsnv.add(nv1);
+//        for(NhanVien nv: dsnv){
+//            System.out.println(nv.getTen());
+//        }
+//        nv1.setTen("Nguyen Van B");
+//        for(NhanVien nv: dsnv){
+//            System.out.println(nv.getTen());
+//        }
+        CongTyBH ct = new CongTyBH("công ty");
+
     }
 }

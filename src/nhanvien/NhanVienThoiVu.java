@@ -1,22 +1,20 @@
 package nhanvien;
 
+import utils.HelpMethod;
 import java.util.Date;
-import java.util.Hashtable;
+import java.util.Scanner;
 
 public class NhanVienThoiVu extends NhanVien {
-    private int tongBaoHiem;
     private final double TIEN_BH = 200000;
-    private Hashtable<String, Double> luongTungThang;
-
-    public NhanVienThoiVu(String ten, String soCMT, String donvi, Date tgBatDauLam, int tongBaoHiem) {
+    private int soHopDongBan;
+    public NhanVienThoiVu(String ten, String soCMT, String donvi, Date tgBatDauLam) {
         super(ten, soCMT, donvi, tgBatDauLam);
-        this.tongBaoHiem = 0;
-        luongTungThang  = new Hashtable<>();
+        this.soHopDongBan = 0;
     }
 
     @Override
     public double tinhLuong() {
-        return tongBaoHiem * TIEN_BH;
+        return soHopDongBan * TIEN_BH;
     }
     public void inTT(){
         super.inTT();
@@ -24,22 +22,31 @@ public class NhanVienThoiVu extends NhanVien {
         System.out.println("Tien Luong: " + tinhLuong());
     }
     public void nhapLuong(String monthYear){
+        //nhập số hợp đồng bán được
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            System.out.print("Nhập số hợp đồng bảo hiểm bán được: ");
+            String soHopDongBan = sc.nextLine();
+            if(HelpMethod.checkNumber(soHopDongBan)){
+                setSoHopDongBan(Integer.parseInt(soHopDongBan));
+                setLuongTungThang(monthYear, tinhLuong());
+                break;
+            }else{
+                System.out.println("Nhập số hợp đồng bảo hiểm bán được chưa hợp lệ");
+            }
+        }
         // nhập giờ làm thêm
-        setLuongTungThang(monthYear, 2000);
-    }
-    public void setLuongTungThang(String monthYear, double luong){
-        luongTungThang.put(monthYear, luong);
 
-    }
-    public int getTongBaoHiem() {
-        return tongBaoHiem;
-    }
-
-    public void setTongBaoHiem(int tongBaoHiem) {
-        this.tongBaoHiem = tongBaoHiem;
     }
 
     public double getTIEN_BH() {
         return TIEN_BH;
+    }
+    public int getSoHopDongBan() {
+        return soHopDongBan;
+    }
+
+    public void setSoHopDongBan(int soHopDongBan) {
+        this.soHopDongBan = soHopDongBan;
     }
 }
