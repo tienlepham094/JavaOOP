@@ -7,6 +7,35 @@ public class Main {
     public static void main(String[] args) throws ParseException {
         CongTyBH cty = new CongTyBH("Công ty Bảo hiểm");
         Scanner sc = new Scanner(System.in);
+        System.out.println("QUẢN LÝ NHÂN VIÊN CÔNG TY BẢO HIỂM");
+        while(true){
+            showMenu();
+            System.out.println("Lựa chọn của bạn: ");
+            int choice = Integer.parseInt(sc.nextLine());
+            switch (choice){
+                case 1:
+                    cty.themNhanVien();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    cty.timKiem();
+                case 5:
+                    break;
+                case 6:
+                    cty.nhapLuongHangThang();
+                case 7:
+                    cty.tinhLuongTB();
+                case 8:
+                    cty.thongKeLuong();
+                case 9:
+                    System.exit(0);
+                default:
+                    break;
+            }
+        }
 
 
     }
@@ -20,6 +49,7 @@ public class Main {
         System.out.println("6. Nhập lương của nhân viên theo từng tháng");
         System.out.println("7. Tính lương trung bình của các nhân viên tại thời điểm hiện tại");
         System.out.println("8. Thống kê mức lương của nhân viên tại thời điểm nhập vào");
+        System.out.println("9. Thoát");
 
     }
 }

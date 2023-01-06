@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) throws ParseException {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập số ");
+//        System.out.println("Nhập số ");
 //        String number = sc.nextLine();
 //        System.out.println(HelpMethod.checkNumber(number));
 //        System.out.println(HelpMethod.checkDateInput(number));
@@ -34,10 +34,23 @@ public class Test {
 //        for(NhanVien nv: dsnv){
 //            System.out.println(nv.getTen());
 //        }
-        CongTyBH ct = new CongTyBH("công ty");
-        NhanVien nv = new NhanVienBienChe();
-        nv.nhapTT();
-
+//        CongTyBH ct = new CongTyBH("công ty");
+//        NhanVien nv = new NhanVienBienChe();
+//        nv.nhapTT();
+//        while(true)
+//        {
+//            System.out.println("Nhập tên nhân viên: ");
+//            String ten = sc.nextLine();
+//            if(HelpMethod.checkLength(ten, 3))
+//            {
+////                setTen(ten);
+//                break;
+//            }
+//            else
+//            {System.out.println("Nhập thông tin có trên 3 ký tự");}
+//        }
+        System.out.println("Nhập tên nhân viên: ");
+        String ten = sc.nextLine();
 
     }
 }

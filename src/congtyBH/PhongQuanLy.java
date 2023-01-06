@@ -17,10 +17,11 @@ public class PhongQuanLy {
     }
     // them, sua, xoa nhan vien
     public void themNV(NhanVien nv){
-        // viết thêm nè
+        dsNV.add(nv);
+
     }
     public void xoaNV(NhanVien nv){
-        // viết thêm tiếp
+        dsNV.remove(nv);
     }
     public void suaNV(){
 

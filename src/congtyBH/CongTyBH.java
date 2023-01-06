@@ -128,4 +128,12 @@ public class CongTyBH {
         String monthYear = sc.nextLine();
         ptc.inLuongTheoThang(monthYear, pql.getDsNV());
     }
+
+    public String getTenCongTy() {
+        return tenCongTy;
+    }
+
+    public void setTenCongTy(String tenCongTy) {
+        this.tenCongTy = tenCongTy;
+    }
 }
