@@ -40,7 +40,7 @@ public class NhanVienBienChe extends NhanVien {
                 setLuongTungThang(monthYear, tinhLuong());
                 break;
             }else{
-                System.out.println("Nhập thông tin chưa hợp lệ");
+                System.out.println("[Error]: Nhập thông tin chưa hợp lệ");
             }
         }
 
@@ -57,7 +57,7 @@ public class NhanVienBienChe extends NhanVien {
                 break;
             }
             else {
-                System.out.println("Nhập lương cơ bản chưa hợp lệ");
+                System.out.println("[Error]: Nhập lương cơ bản chưa hợp lệ");
             }
         }
     }

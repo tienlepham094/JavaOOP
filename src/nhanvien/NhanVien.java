@@ -39,7 +39,7 @@ public abstract class NhanVien {
                 break;
             }
             else
-            {System.out.println("Nhập thông tin có trên 3 ký tự");}
+            {System.out.println("[Error]: Nhập thông tin có trên 3 ký tự");}
         }
 
         while (true)
@@ -50,11 +50,11 @@ public abstract class NhanVien {
                 setSoCMT(soCMT);
                 break;
             }else{
-                System.out.println("Nhập số CMT là dãy 9 số");
+                System.out.println("[Error]: Nhập số CMT là dãy 9 số");
             }
         }
 
-        System.out.print("Nhập đon vị: ");
+        System.out.print("Nhập đơn vị: ");
         String donVi = sc.nextLine();
         setDonvi(donVi);
         while(true){
@@ -64,7 +64,7 @@ public abstract class NhanVien {
                 setTgBatDauLam(HelpMethod.stringToDate(tgBatDauLam));
                 break;
             }else{
-                System.out.println("Nhập lại thông tin có dạng DD/MM/YYYY");
+                System.out.println("[Error]: Nhập lại thông tin có dạng DD/MM/YYYY");
             }
         }
     }
@@ -81,8 +81,8 @@ public abstract class NhanVien {
             System.out.println("Tên nhân viên: " + getTen());
             System.out.println("Lương tháng " + monthYear + " : " + luong);
         }else{
-            System.out.println("Chưa tồn tại dữ liệu về lương tháng " + monthYear);
-            System.out.println("Vui lòng nhập thông tin trước khi tìm kiếm !");
+            System.out.println("[Error]: Chưa tồn tại dữ liệu về lương tháng " + monthYear);
+            System.out.println("[Error]: Vui lòng nhập thông tin trước khi tìm kiếm !");
         }
 
 

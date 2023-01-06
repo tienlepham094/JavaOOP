@@ -26,25 +26,58 @@ public class CongTyBH {
         System.out.println("1. Nhân viên biên chế");
         System.out.println("2. Nhân viên hợp đồng");
         System.out.println("Lựa chọn của bạn: ");
-        int choice = Integer.parseInt(sc.nextLine());
-        NhanVien nv;
-        switch (choice) {
-            case 1:
-                nv = new NhanVienBienChe();
-                nv.nhapTT();
-                pql.themNV(nv);
-                nv.inTT();
-                break;
-            case 2:
-                nv = new NhanVienThoiVu();
-                nv.nhapTT();
-                pql.themNV(nv);
-                nv.nhapTT();
-                break;
-            default:
-                System.out.println("Lựa chọn của bạn ko hợp lệ");
-                break;
+        String choiceStr = sc.nextLine();
+        if(HelpMethod.checkNumber(choiceStr)){
+            int choice = Integer.parseInt(choiceStr);
+            NhanVien nv;
+            switch (choice) {
+                case 1:
+                    nv = new NhanVienBienChe();
+                    nv.nhapTT();
+                    pql.themNV(nv);
+                    nv.inTT();
+                    break;
+                case 2:
+                    nv = new NhanVienThoiVu();
+                    nv.nhapTT();
+                    pql.themNV(nv);
+                    nv.inTT();
+                    break;
+                default:
+                    System.out.println("Lựa chọn của bạn ko hợp lệ");
+                    break;
+            }
+        }else{
+            System.out.println("[Error]: Nhập thông tin không hợp lệ!");
         }
+
+
+    }
+    // xóa nhân viên
+    public void xoaNV(){
+        if(pql.getDsNV().size()!=0){
+            System.out.println("DANH SÁCH NHÂN VIÊN");
+            System.out.println("------------------------------------------------------------");
+            for(int i=1; i<= pql.getDsNV().size(); i++){
+                System.out.println(i+".");
+                pql.getDsNV().get(i-1).inTT();
+            }
+            Scanner sc = new Scanner(System.in);
+            System.out.println("================================================================");
+            System.out.println("Nhập lựa chọn thông tin cần xóa: ");
+            try{
+                int choice = Integer.parseInt(sc.nextLine());
+                pql.xoaNV(pql.getDsNV().get(choice-1));
+                System.out.println("[Info]: Xóa nhân viên thành công");
+            }catch (Exception e){
+                System.out.println(e);
+                System.out.println("[Error]: Nhập thông tin không hợp lệ");
+                System.out.println("Xóa không thành công");
+            }
+        }else{
+            System.out.println("Chưa tồn tại dữ liệu. Vui lòng thêm nhân viên vào dach sách trước");
+        }
+
     }
     // tìm kiếm
     public void timKiem() throws ParseException {

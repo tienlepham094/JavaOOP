@@ -17,6 +17,7 @@ public class Main {
                     cty.themNhanVien();
                     break;
                 case 2:
+                    cty.xoaNV();
                     break;
                 case 3:
                     break;
