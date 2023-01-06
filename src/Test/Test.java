@@ -34,23 +34,10 @@ public class Test {
 //        for(NhanVien nv: dsnv){
 //            System.out.println(nv.getTen());
 //        }
-//        CongTyBH ct = new CongTyBH("công ty");
-//        NhanVien nv = new NhanVienBienChe();
-//        nv.nhapTT();
-//        while(true)
-//        {
-//            System.out.println("Nhập tên nhân viên: ");
-//            String ten = sc.nextLine();
-//            if(HelpMethod.checkLength(ten, 3))
-//            {
-////                setTen(ten);
-//                break;
-//            }
-//            else
-//            {System.out.println("Nhập thông tin có trên 3 ký tự");}
-//        }
-        System.out.println("Nhập tên nhân viên: ");
-        String ten = sc.nextLine();
+       CongTyBH ct = new CongTyBH("công ty");
+       NhanVien nv = new NhanVienBienChe();
+       nv.nhapTT();
+       nv.inTT();
 
     }
 }

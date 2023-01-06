@@ -27,18 +27,19 @@ public class CongTyBH {
         System.out.println("2. Nhân viên hợp đồng");
         System.out.println("Lựa chọn của bạn: ");
         int choice = Integer.parseInt(sc.nextLine());
+        NhanVien nv;
         switch (choice) {
             case 1:
-                NhanVien nv = new NhanVienBienChe();
+                nv = new NhanVienBienChe();
                 nv.nhapTT();
                 pql.themNV(nv);
                 nv.inTT();
                 break;
             case 2:
-                NhanVien nv1 = new NhanVienThoiVu();
-                nv1.nhapTT();
-                pql.themNV(nv1);
-                nv1.nhapTT();
+                nv = new NhanVienThoiVu();
+                nv.nhapTT();
+                pql.themNV(nv);
+                nv.nhapTT();
                 break;
             default:
                 System.out.println("Lựa chọn của bạn ko hợp lệ");
