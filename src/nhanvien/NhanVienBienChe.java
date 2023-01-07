@@ -25,7 +25,7 @@ public class NhanVienBienChe extends NhanVien {
     }
     public void inTT(){
         super.inTT();
-        System.out.println("Lương cơ bản: " + luongCoBan);
+        System.out.println("Lương cơ bản: " + HelpMethod.formatNumber(luongCoBan));
     }
 
     public void nhapLuong(String monthYear){

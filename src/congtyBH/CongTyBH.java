@@ -149,7 +149,7 @@ public class CongTyBH {
             System.out.println("Chưa có thông tin về giờ làm thêm và số hợp đồng tháng này");
             System.out.println("Vui lòng nhập đẩy đủ các thông tin trên");
         }else{
-            System.out.println("Lương TB của tất cả các nhân viên thời điểm hiện tại : " + luongTB);
+            System.out.println("Lương TB của tất cả các nhân viên thời điểm hiện tại : " + HelpMethod.formatNumber(luongTB));
         }
     }
 
