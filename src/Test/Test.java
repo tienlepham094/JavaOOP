@@ -37,10 +37,11 @@ public class Test {
 //       nv.nhapLuong("4/2022");
 //       nv.inLuong("4/2022");
 //        nv.setLuongTungThang("4/2022", 2000);
-        System.out.println(nv.getLuongTungThang());
+//        System.out.println(nv.getLuongTungThang());
 //        nv.inLuong("4/2022");
 
 //       nv.inTT();
 //        System.out.println(nv instanceof NhanVienThoiVu);
+//        System.out.println(HelpMethod.checkMonthYearInput("11/2022"));
     }
 }

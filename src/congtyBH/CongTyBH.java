@@ -158,19 +158,31 @@ public class CongTyBH {
     // nhập lương của nhân viên theo tháng
     public void nhapLuongHangThang(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");
+        System.out.println("Vui lòng nhập MM/YYYY mà bạn muốn nhập lương");
         String monthYear = sc.nextLine();
-        ptc.nhapLuongTheoThang(monthYear, pql.getDsNV());
+        if(HelpMethod.checkMonthYearInput(monthYear)){
+            ptc.nhapLuongTheoThang(monthYear, pql.getDsNV());
+        }else{
+            System.out.println("[Error]: Nhập thông tin không hợp lệ");
+        }
     }
 
     // thống kê luong tại một thời điểm bất kì
     public void thongKeLuong(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Vui lòng nhập tháng/năm mà bạn muốn nhập lương");
+        System.out.println("Vui lòng nhập MM/YYYY mà bạn muốn nhập lương");
         String monthYear = sc.nextLine();
-        ptc.inLuongTheoThang(monthYear, pql.getDsNV());
-    }
+        if(HelpMethod.checkMonthYearInput(monthYear)){
+            ptc.inLuongTheoThang(monthYear, pql.getDsNV());
+        }else{
+            System.out.println("[Error]: Nhập thông tin không hợp lệ");
+        }
 
+    }
+    public void inTT(){
+        System.out.println("Tên công ty: " + getTenCongTy());
+        System.out.println("Tổng số nhân viên: " + pql.getSoNV());
+    }
     public String getTenCongTy() {
         return tenCongTy;
     }

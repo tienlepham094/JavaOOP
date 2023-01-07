@@ -8,8 +8,10 @@ public class Main {
     public static void main(String[] args) throws ParseException {
         CongTyBH cty = new CongTyBH("Công ty Bảo hiểm");
         Scanner sc = new Scanner(System.in);
-        System.out.println("QUẢN LÝ NHÂN VIÊN CÔNG TY BẢO HIỂM");
+
         while(true){
+            System.out.println("\n===================QUẢN LÝ NHÂN VIÊN CÔNG TY BẢO HIỂM=====================");
+            cty.inTT();
             showMenu();
             System.out.println("Lựa chọn của bạn: ");
             String choiceStr = sc.nextLine();

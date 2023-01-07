@@ -24,7 +24,7 @@ public class PhongQuanLy {
         dsNV.remove(nv);
         soNV--;
     }
-    public void suaNV(){
+    public void suaNV(NhanVien nv){
 
     }
     // tim kiem nhan vien

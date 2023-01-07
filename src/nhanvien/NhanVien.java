@@ -53,9 +53,16 @@ public abstract class NhanVien {
             }
         }
 
-        System.out.print("Nhập đơn vị: ");
-        String donVi = sc.nextLine();
-        setDonvi(donVi);
+        while(true){
+            System.out.print("Nhập đơn vị: ");
+            String donVi = sc.nextLine();
+            if(HelpMethod.checkLength(donVi, 1)){
+                setDonvi(donVi);
+                break;
+            }else{
+                System.out.println("[Error]: Nhập đầy đủ thông tin");
+            }
+        }
         while(true){
             System.out.print("Nhập thời gian bắt đầu làm : ");
             String tgBatDauLam = sc.nextLine();
@@ -68,7 +75,7 @@ public abstract class NhanVien {
         }
     }
     public void inTT(){
-        System.out.println("-------IN THÔNG TIN NHÂN VIÊN--------");
+        System.out.println("\n-------IN THÔNG TIN NHÂN VIÊN--------");
         System.out.println("Tên: " + getTen());
         System.out.println("Số CMT: " + getSoCMT());
         System.out.println("Đơn vị: " + getDonvi());

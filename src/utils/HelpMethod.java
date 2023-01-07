@@ -29,7 +29,7 @@ public class HelpMethod {
     // check độ dài của chuỗi nhập vào
     public static boolean checkLength(String str, int length){
         if(str == null) return false;
-        return str.length() >= length;
+        return str.trim().length() >= length;
     }
 
     // check cmt
@@ -51,6 +51,28 @@ public class HelpMethod {
             return false;
         }
         return true;
+    }
+    public static boolean checkMonthYearInput(String str){
+        Calendar cal = Calendar.getInstance();
+        Date dateNow = new Date();
+        cal.setTime(dateNow);
+        if(str == null) return false;
+        if(str.trim().length()==7){
+            String [] strList = str.split("/");
+            if(strList.length == 2 && strList[0].length()==2 && strList[1].length()==4) {
+                try{
+                    if(Integer.parseInt(strList[1]) == cal.get(Calendar.YEAR) &&
+                            Integer.parseInt(strList[0])<=cal.get(Calendar.MONTH)){
+                        return true;
+                    }else if (Integer.parseInt(strList[1]) < cal.get(Calendar.YEAR)){
+                        return 1<= Integer.parseInt(strList[0]) && 12>= Integer.parseInt(strList[0]);
+                    }else return false;
+                }catch (Exception e) {
+                    return false;
+                }
+            }
+            else return false;
+        }else return false;
     }
     public static boolean compareMonthYear(Date date, String monthYear){
         Calendar cal = Calendar.getInstance();
