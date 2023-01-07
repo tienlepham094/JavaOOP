@@ -24,24 +24,26 @@ public class CongTyBH {
         Scanner sc = new Scanner(System.in);
         System.out.println("Chọn loại nhân viên bạn muốn thêm");
         System.out.println("1. Nhân viên biên chế");
-        System.out.println("2. Nhân viên hợp đồng");
+        System.out.println("2. Nhân viên thời vụ");
         System.out.println("Lựa chọn của bạn: ");
         String choiceStr = sc.nextLine();
         if(HelpMethod.checkNumber(choiceStr)){
             int choice = Integer.parseInt(choiceStr);
-            NhanVien nv;
             switch (choice) {
                 case 1:
-                    nv = new NhanVienBienChe();
+                    // upcasting
+                    NhanVien nv = new NhanVienBienChe();
                     nv.nhapTT();
                     pql.themNV(nv);
                     nv.inTT();
                     break;
                 case 2:
-                    nv = new NhanVienThoiVu();
-                    nv.nhapTT();
-                    pql.themNV(nv);
-                    nv.inTT();
+                    // down casting
+                    NhanVien nvien = new NhanVienThoiVu();
+                    NhanVienThoiVu nvtv = (NhanVienThoiVu) nvien;
+                    nvtv.nhapTT();
+                    pql.themNV(nvtv);
+                    nvtv.inTTin();
                     break;
                 default:
                     System.out.println("Lựa chọn của bạn ko hợp lệ");

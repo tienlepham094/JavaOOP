@@ -59,7 +59,7 @@ public abstract class NhanVien {
         while(true){
             System.out.print("Nhập thời gian bắt đầu làm : ");
             String tgBatDauLam = sc.nextLine();
-            if(HelpMethod.checkDateInput(tgBatDauLam)){
+            if(HelpMethod.checkDateInput(tgBatDauLam) && HelpMethod.stringToDate(tgBatDauLam).before(new Date())){
                 setTgBatDauLam(HelpMethod.stringToDate(tgBatDauLam));
                 break;
             }else{
