@@ -18,10 +18,11 @@ public class PhongQuanLy {
     // them, sua, xoa nhan vien
     public void themNV(NhanVien nv){
         dsNV.add(nv);
-
+        soNV++;
     }
     public void xoaNV(NhanVien nv){
         dsNV.remove(nv);
+        soNV--;
     }
     public void suaNV(){
 
@@ -51,7 +52,7 @@ public class PhongQuanLy {
     public ArrayList<NhanVien> timKiem(Date date){
         ArrayList<NhanVien> result = new ArrayList<>();
         for(NhanVien nv: dsNV){
-            if(nv.getTgBatDauLam() == date){
+            if(nv.getTgBatDauLam().equals(date)){
                 result.add(nv);
             }
         }

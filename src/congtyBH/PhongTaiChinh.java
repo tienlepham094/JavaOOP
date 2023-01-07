@@ -12,15 +12,17 @@ public class PhongTaiChinh {
         Calendar cal = Calendar.getInstance();
         cal.setTime(dateNow);
         String monthYear = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR);
+
         double sum = 0;
         int count = 0;
         for(NhanVien nv: dsNV){
             if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
+                sum += nv.getLuong(monthYear);
                 count++;
             }
         }
-
-        return sum/count;
+        if(count == 0) return 0;
+        else return sum /count;
     }
     // nhap luong theo thang
     public void nhapLuongTheoThang(String monthYear,ArrayList<NhanVien> dsNV){

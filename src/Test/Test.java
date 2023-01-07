@@ -6,10 +6,7 @@ import nhanvien.NhanVienThoiVu;
 import utils.HelpMethod;
 
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) throws ParseException {
@@ -34,10 +31,16 @@ public class Test {
 //        for(NhanVien nv: dsnv){
 //            System.out.println(nv.getTen());
 //        }
-       CongTyBH ct = new CongTyBH("công ty");
+//       CongTyBH ct = new CongTyBH("công ty");
        NhanVien nv = new NhanVienBienChe();
-       nv.nhapTT();
-       nv.inTT();
+//       nv.nhapTT();
+//       nv.nhapLuong("4/2022");
+//       nv.inLuong("4/2022");
+//        nv.setLuongTungThang("4/2022", 2000);
+        System.out.println(nv.getLuongTungThang());
+//        nv.inLuong("4/2022");
 
+//       nv.inTT();
+//        System.out.println(nv instanceof NhanVienThoiVu);
     }
 }

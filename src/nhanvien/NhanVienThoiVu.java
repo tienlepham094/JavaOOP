@@ -17,20 +17,18 @@ public class NhanVienThoiVu extends NhanVien {
     public double tinhLuong() {
         return soHopDongBan * TIEN_BH;
     }
-    public void inTT(){
-        super.inTT();
-        System.out.println(this.toString());
-        System.out.println("Tien Luong: " + tinhLuong());
-    }
     public void nhapLuong(String monthYear){
         //nhập số hợp đồng bán được
         Scanner sc = new Scanner(System.in);
+        inTT();
         while(true){
-            System.out.print("Nhập số hợp đồng bảo hiểm bán được: ");
+            System.out.println("Nhập số hợp đồng bảo hiểm bán được: ");
             String soHopDongBan = sc.nextLine();
             if(HelpMethod.checkNumber(soHopDongBan)){
                 setSoHopDongBan(Integer.parseInt(soHopDongBan));
-                setLuongTungThang(monthYear, tinhLuong());
+                super.setLuongTungThang(monthYear, tinhLuong());
+                System.out.println("------- Kết quả ---------");
+                inLuong(monthYear);
                 break;
             }else{
                 System.out.println("Nhập số hợp đồng bảo hiểm bán được chưa hợp lệ");
@@ -50,4 +48,5 @@ public class NhanVienThoiVu extends NhanVien {
     public void setSoHopDongBan(int soHopDongBan) {
         this.soHopDongBan = soHopDongBan;
     }
+
 }

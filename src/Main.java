@@ -1,4 +1,5 @@
 import congtyBH.CongTyBH;
+import utils.HelpMethod;
 
 import java.text.ParseException;
 import java.util.Scanner;
@@ -11,31 +12,41 @@ public class Main {
         while(true){
             showMenu();
             System.out.println("Lựa chọn của bạn: ");
-            int choice = Integer.parseInt(sc.nextLine());
-            switch (choice){
-                case 1:
-                    cty.themNhanVien();
-                    break;
-                case 2:
-                    cty.xoaNV();
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    cty.timKiem();
-                case 5:
-                    break;
-                case 6:
-                    cty.nhapLuongHangThang();
-                case 7:
-                    cty.tinhLuongTB();
-                case 8:
-                    cty.thongKeLuong();
-                case 9:
-                    System.exit(0);
-                default:
-                    break;
+            String choiceStr = sc.nextLine();
+            if(HelpMethod.checkNumber(choiceStr)){
+                int choice = Integer.parseInt(choiceStr);
+                switch (choice){
+                    case 1:
+                        cty.themNhanVien();
+                        break;
+                    case 2:
+                        cty.xoaNV();
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        cty.timKiem();
+                    case 5:
+                        break;
+                    case 6:
+                        cty.nhapLuongHangThang();
+                        break;
+                    case 7:
+                        cty.tinhLuongTB();
+                        break;
+                    case 8:
+                        cty.thongKeLuong();
+                        break;
+                    case 9:
+                        System.exit(0);
+                    default:
+                        break;
+                }
+            
+            }else {
+                System.out.println("[Error]: Nhập thông tin không hợp lệ");
             }
+            
         }
 
 

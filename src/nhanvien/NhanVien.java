@@ -12,7 +12,7 @@ public abstract class NhanVien {
     private String soCMT;
     private String donvi;
     private Date tgBatDauLam;
-    private Hashtable<String, Double> luongTungThang;
+    private Hashtable<String, Double> luongTungThang = new Hashtable<>();
     public NhanVien() {
     }
 
@@ -21,7 +21,6 @@ public abstract class NhanVien {
         this.soCMT = soCMT;
         this.donvi = donvi;
         this.tgBatDauLam = tgBatDauLam;
-        luongTungThang = new Hashtable<>();
     }
 
     public abstract double tinhLuong();
@@ -69,23 +68,28 @@ public abstract class NhanVien {
         }
     }
     public void inTT(){
-        System.out.println("In ra thông tin nhân viên:");
+        System.out.println("-------IN THÔNG TIN NHÂN VIÊN--------");
         System.out.println("Tên: " + getTen());
         System.out.println("Số CMT: " + getSoCMT());
         System.out.println("Đơn vị: " + getDonvi());
         System.out.println("Thời gian bắt đầu làm: " + HelpMethod.formatDate(getTgBatDauLam()));
     }
     public void inLuong(String monthYear){
-        if(luongTungThang.containsKey(monthYear)){
-            double luong = luongTungThang.get(monthYear);
+        double luong = getLuong(monthYear);
+        if(luong !=0){
             System.out.println("Tên nhân viên: " + getTen());
             System.out.println("Lương tháng " + monthYear + " : " + luong);
         }else{
             System.out.println("[Error]: Chưa tồn tại dữ liệu về lương tháng " + monthYear);
             System.out.println("[Error]: Vui lòng nhập thông tin trước khi tìm kiếm !");
         }
-
-
+    }
+    public double getLuong(String monthYear){
+        if(luongTungThang.containsKey(monthYear)){
+            return luongTungThang.get(monthYear);
+        }else{
+            return 0;
+        }
     }
     public String getTen() {
         return ten;
@@ -117,6 +121,10 @@ public abstract class NhanVien {
 
     public void setTgBatDauLam(Date tgBatDauLam) {
         this.tgBatDauLam = tgBatDauLam;
+    }
+
+    public Hashtable<String, Double> getLuongTungThang() {
+        return luongTungThang;
     }
     public void setLuongTungThang(String monthYear, double luong){
         luongTungThang.put(monthYear, luong);}

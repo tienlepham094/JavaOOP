@@ -12,8 +12,6 @@ public class NhanVienBienChe extends NhanVien {
     private double gioLamThem;
     private final double TIEN_LUONG_CB = 2000000;
     private final double TIEN_LUONG_LT = 200000;
-//    private Hashtable<String, Double> luongTungThang;
-
     public NhanVienBienChe(){};
     public NhanVienBienChe(String ten, String soCMT, String donvi, Date tgBatDauLam, double luongCoBan) {
         super(ten, soCMT, donvi, tgBatDauLam);
@@ -31,13 +29,16 @@ public class NhanVienBienChe extends NhanVien {
     }
 
     public void nhapLuong(String monthYear){
+        inTT();
+        Scanner sc = new Scanner(System.in);
         while(true){
-            System.out.print("Nhập số giờ làm thêm: ");
-            Scanner sc = new Scanner(System.in);
+            System.out.println("Nhập số giờ làm thêm: ");
             String soGioLamThem = sc.nextLine();
             if(HelpMethod.checkNumber(soGioLamThem)){
                 setGioLamThem(Double.parseDouble(soGioLamThem));
-                setLuongTungThang(monthYear, tinhLuong());
+                super.setLuongTungThang(monthYear, tinhLuong());
+                System.out.println("------- Kết quả ---------");
+                inLuong(monthYear);
                 break;
             }else{
                 System.out.println("[Error]: Nhập thông tin chưa hợp lệ");

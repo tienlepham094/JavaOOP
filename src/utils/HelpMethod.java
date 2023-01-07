@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class HelpMethod {
-    private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyyy");
+    private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
     public static String formatDate(Date date){
         return dateFormatter.format(date);
     }
@@ -55,8 +55,9 @@ public class HelpMethod {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         String [] items = monthYear.split("/");
-        if((cal.get(Calendar.MONTH) + 1) <= Integer.parseInt(items[0]) && cal.get(Calendar.YEAR)
-                <= Integer.parseInt(items[1])){
+        if(cal.get(Calendar.YEAR) <= Integer.parseInt(items[1])){
+            return true;
+        }else if((cal.get(Calendar.MONTH) + 1) <= Integer.parseInt(items[0]) && cal.get(Calendar.YEAR)== Integer.parseInt(items[1])){
             return true;
         }
         else return false;
