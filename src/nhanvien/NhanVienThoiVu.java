@@ -37,7 +37,10 @@ public class NhanVienThoiVu extends NhanVien {
 
 
     }
-
+    public void inTT(){
+        super.inTT();
+        System.out.println("Loại nhân viên: Nhân viên hợp đồng");
+    }
     public double getTIEN_BH() {
         return TIEN_BH;
     }

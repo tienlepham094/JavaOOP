@@ -25,6 +25,7 @@ public class NhanVienBienChe extends NhanVien {
     }
     public void inTT(){
         super.inTT();
+        System.out.println("Loại nhân viên: Nhân viên biên chế");
         System.out.println("Lương cơ bản: " + HelpMethod.formatNumber(luongCoBan));
     }
 
