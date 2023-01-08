@@ -1,3 +1,7 @@
+/**
+ * Method sua(), inDS(): Nguyen Van Anh 20200035
+ * Other things: Le Pham Thuy Tien 20207633
+ */
 package congtyBH;
 
 import nhanvien.NhanVien;
@@ -20,6 +24,8 @@ public class CongTyBH {
         this.ptc = new PhongTaiChinh();
         this.tenCongTy = tenCongTy;
     }
+
+    // them nhan vien
     public void themNhanVien() throws ParseException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Chọn loại nhân viên bạn muốn thêm");

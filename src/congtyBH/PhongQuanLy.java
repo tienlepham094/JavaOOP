@@ -1,3 +1,7 @@
+/**
+ * Method timKiemCMT(), timKiem(): Le Pham Thuy Tien 20207633
+ * Method them(), sua(), xoa(), inDS(): Nguyen Van Anh 20200035
+ */
 package congtyBH;
 
 import nhanvien.NhanVien;

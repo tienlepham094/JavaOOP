@@ -1,3 +1,7 @@
+/**
+ * Method inLuong(), getLuong(), setLuongTungThang(): Le Pham Thuy Tien 20207633
+ * Other things: Nguyen Van Anh 20200035
+ */
 package nhanvien;
 
 import utils.HelpMethod;

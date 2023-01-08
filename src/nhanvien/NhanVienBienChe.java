@@ -1,10 +1,10 @@
+// Nguyen Van Anh 20200035
 package nhanvien;
 
 import utils.HelpMethod;
 
 import java.text.ParseException;
 import java.util.Date;
-import java.util.Hashtable;
 import java.util.Scanner;
 
 public class NhanVienBienChe extends NhanVien {

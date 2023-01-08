@@ -1,3 +1,4 @@
+// Le Pham Thuy Tien 20207633
 package congtyBH;
 
 import nhanvien.NhanVien;
@@ -7,6 +8,7 @@ import java.util.*;
 
 public class PhongTaiChinh {
 
+    // tinh luong tb tai thoi diem hien tai
     public double tinhLuongTB(ArrayList<NhanVien> dsNV){
         Date dateNow = new Date();
         Calendar cal = Calendar.getInstance();
@@ -35,7 +37,7 @@ public class PhongTaiChinh {
     }
 
 
-
+    // in luong theo tung thang
     public void inLuongTheoThang(String monthYear, ArrayList<NhanVien> dsNV){
         for(NhanVien nv: dsNV){
             if(HelpMethod.compareMonthYear(nv.getTgBatDauLam(), monthYear)){
