@@ -11,10 +11,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while(true){
-            System.out.println("\n===================QUẢN LÝ NHÂN VIÊN CÔNG TY BẢO HIỂM=====================");
-            cty.inTT();
             showMenu();
-            System.out.println("Lựa chọn của bạn: ");
+            cty.inTT();
+
+            System.out.println("\nLựa chọn của bạn (Chọn từ 1-9): ");
             String choiceStr = sc.nextLine();
             if(HelpMethod.checkNumber(choiceStr)){
                 int choice = Integer.parseInt(choiceStr);
@@ -55,16 +55,20 @@ public class Main {
 
     }
     public static void showMenu(){
-        System.out.println("******************************************************************");
-        System.out.println("1. Thêm nhân viên");
-        System.out.println("2. Xóa nhân viên");
-        System.out.println("3. Cập nhật thông tin nhân viên");
-        System.out.println("4. Tìm kiếm nhân viên");
-        System.out.println("5. Hiển thị danh sách các nhân viên");
-        System.out.println("6. Nhập lương của nhân viên theo từng tháng");
-        System.out.println("7. Tính lương trung bình của các nhân viên tại thời điểm hiện tại");
-        System.out.println("8. Thống kê mức lương của nhân viên tại thời điểm nhập vào");
-        System.out.println("9. Thoát");
+        System.out.println("======================================================================");
+        System.out.println("*                    QUẢN LÝ CÔNG TY BẢO HIỂM                        *");
+        System.out.println("======================================================================");
+        System.out.println("*  1. Thêm nhân viên                                                 *");
+        System.out.println("*  2. Xóa nhân viên                                                  *");
+        System.out.println("*  3. Cập nhật thông tin nhân viên                                   *");
+        System.out.println("*  4. Tìm kiếm nhân viên                                             *");
+        System.out.println("*  5. Hiển thị danh sách các nhân viên                               *");
+        System.out.println("*  6. Nhập lương của nhân viên theo từng tháng                       *");
+        System.out.println("*  7. Tính lương trung bình của các nhân viên tại thời điểm hiện tại *");
+        System.out.println("*  8. Thống kê mức lương của nhân viên tại thời điểm nhập vào        *");
+        System.out.println("*  9. Thoát                                                          *");
+        System.out.println("======================================================================");
+        System.out.println("");
 
     }
 }
