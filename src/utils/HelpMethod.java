@@ -47,7 +47,11 @@ public class HelpMethod {
     public static boolean checkDateInput(String str){
         if (str == null) return false;
         try {
-            dateFormatter.parse(str);
+            Calendar cal = Calendar.getInstance();
+            Date date = dateFormatter.parse(str);
+            cal.setTime(date);
+            if(cal.get(Calendar.YEAR)<1000) return false;
+
         } catch (ParseException e) {
             return false;
         }
