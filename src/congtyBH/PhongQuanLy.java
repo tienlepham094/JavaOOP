@@ -5,6 +5,8 @@
 package congtyBH;
 
 import nhanvien.NhanVien;
+import nhanvien.NhanVienBienChe;
+import nhanvien.NhanVienThoiVu;
 import utils.HelpMethod;
 
 import java.util.*;
@@ -62,7 +64,32 @@ public class PhongQuanLy {
         }
         return result;
     }
+    // in ds
 
+    public void inDS()
+    {
+        if(dsNV.size()==0){
+            System.out.println("Chưa tồn tại dữ liệu. Vui lòng thêm nhân viên vào dach sách trước");
+        }else{
+            System.out.printf("------------------------                      IN DANH SACH NHAN VIEN                -----------------------------------%n");
+            System.out.printf("-----------------------------------------------------------------------------------------------------------------------%n");
+            System.out.printf("| %-3s | %-30s | %-12s | %-30s | %-15s | %-10s |%n", "STT", "TÊN NHÂN VIÊN", "SỐ CMT", "ĐƠN VỊ", "LOẠI NHÂN VIÊN", "TG BẮT ĐẦU");
+            System.out.printf("-----------------------------------------------------------------------------------------------------------------------%n");
+            for(int i=1; i<= dsNV.size(); i++)
+            {
+                if (dsNV.get(i-1) instanceof NhanVienBienChe)
+                {
+                    System.out.printf("| %3d | %-30s | %-12s | %-30s | %-15s | %-10s |%n", i, dsNV.get(i-1).getTen(), dsNV.get(i-1).getSoCMT(), dsNV.get(i-1).getDonvi(), "biên chế", HelpMethod.formatDate(dsNV.get(i-1).getTgBatDauLam()));
+                }
+                if (dsNV.get(i-1) instanceof NhanVienThoiVu)
+                {
+                    System.out.printf("| %3d | %-30s | %-12s | %-30s | %-15s | %-10s |%n", i, dsNV.get(i-1).getTen(), dsNV.get(i-1).getSoCMT(), dsNV.get(i-1).getDonvi(), "thời vụ", HelpMethod.formatDate(dsNV.get(i-1).getTgBatDauLam()));
+                }
+            }
+            System.out.printf("-----------------------------------------------------------------------------------------------------------------------%n");
+        }
+
+    }
 
     public int getSoNV() {
         return soNV;

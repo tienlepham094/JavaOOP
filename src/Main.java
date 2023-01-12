@@ -30,6 +30,7 @@ public class Main {
                     case 4:
                         cty.timKiem();
                     case 5:
+                        cty.inDS();
                         break;
                     case 6:
                         cty.nhapLuongHangThang();
@@ -55,7 +56,7 @@ public class Main {
 
     }
     public static void showMenu(){
-        System.out.println("******************************************************************");
+        System.out.println("\n****************************************************************************");
         System.out.println("1. Thêm nhân viên");
         System.out.println("2. Xóa nhân viên");
         System.out.println("3. Cập nhật thông tin nhân viên");

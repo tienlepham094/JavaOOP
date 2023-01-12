@@ -64,14 +64,8 @@ public class CongTyBH {
     // xóa nhân viên
     public void xoaNV(){
         if(pql.getDsNV().size()!=0){
-            System.out.println("DANH SÁCH NHÂN VIÊN");
-            System.out.println("------------------------------------------------------------");
-            for(int i=1; i<= pql.getDsNV().size(); i++){
-                System.out.println(i+".");
-                pql.getDsNV().get(i-1).inTT();
-            }
+            pql.inDS();
             Scanner sc = new Scanner(System.in);
-            System.out.println("================================================================");
             System.out.println("Nhập lựa chọn thông tin cần xóa: ");
             try{
                 int choice = Integer.parseInt(sc.nextLine());
@@ -184,6 +178,10 @@ public class CongTyBH {
             System.out.println("[Error]: Nhập thông tin không hợp lệ");
         }
 
+    }
+    // in danh sach
+    public void inDS(){
+        pql.inDS();
     }
     public void inTT(){
         System.out.println("Tên công ty: " + getTenCongTy());
