@@ -26,6 +26,7 @@ public class Main {
                         cty.xoaNV();
                         break;
                     case 3:
+                        cty.suaNV();
                         break;
                     case 4:
                         cty.timKiem();

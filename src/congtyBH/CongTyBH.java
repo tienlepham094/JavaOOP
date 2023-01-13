@@ -81,6 +81,27 @@ public class CongTyBH {
         }
 
     }
+
+    // sua nhan vien
+    //sửa nhân viên
+    public void suaNV(){
+        if(pql.getDsNV().size()!=0){
+            pql.inDS();
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Nhập lựa chọn thông tin cần sửa: ");
+            try{
+                int choice = Integer.parseInt(sc.nextLine());
+                pql.suaNV(pql.getDsNV().get(choice-1));
+                System.out.println("[Info]: Sửa nhân viên thành công");
+            }catch (Exception e){
+                System.out.println(e);
+                System.out.println("[Error]: Nhập thông tin không hợp lệ");
+                System.out.println("Sửa không thành công");
+            }
+        }else{
+            System.out.println("Chưa tồn tại dữ liệu. Vui lòng thêm nhân viên vào dach sách trước");
+        }
+    }
     // tìm kiếm
     public void timKiem() throws ParseException {
         Scanner sc = new Scanner(System.in);
