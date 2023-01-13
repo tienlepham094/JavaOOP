@@ -67,7 +67,7 @@ public class HelpMethod {
             if(strList.length == 2 && strList[0].length()==2 && strList[1].length()==4) {
                 try{
                     if(Integer.parseInt(strList[1]) == cal.get(Calendar.YEAR) &&
-                            Integer.parseInt(strList[0])<=cal.get(Calendar.MONTH)){
+                            Integer.parseInt(strList[0])<=cal.get(Calendar.MONTH)+1){
                         return true;
                     }else if (Integer.parseInt(strList[1]) < cal.get(Calendar.YEAR)){
                         return 1<= Integer.parseInt(strList[0]) && 12>= Integer.parseInt(strList[0]);
