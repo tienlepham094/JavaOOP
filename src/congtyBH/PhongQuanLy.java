@@ -9,6 +9,7 @@ import nhanvien.NhanVienBienChe;
 import nhanvien.NhanVienThoiVu;
 import utils.HelpMethod;
 
+import java.text.ParseException;
 import java.util.*;
 
 public class PhongQuanLy {
@@ -30,8 +31,8 @@ public class PhongQuanLy {
         dsNV.remove(nv);
         soNV--;
     }
-    public void suaNV(NhanVien nv){
-
+    public void suaNV(NhanVien nv) throws ParseException {
+        nv.nhapTT();
     }
     // tim kiem nhan vien
     public ArrayList<NhanVien> timKiem(String ten){
