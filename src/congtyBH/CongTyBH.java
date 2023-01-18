@@ -184,7 +184,7 @@ public class CongTyBH {
         if(HelpMethod.checkMonthYearInput(monthYear)){
             ptc.nhapLuongTheoThang(monthYear, pql.getDsNV());
         }else{
-            System.out.println("[Error]: Nhập thông tin không hợp lệ");
+            System.out.println("[Error]: Nhập thông tin không hợp lệ. Vui lòng nhập thông tin đúng định dạng");
         }
     }
 

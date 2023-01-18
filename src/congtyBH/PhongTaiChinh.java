@@ -13,7 +13,13 @@ public class PhongTaiChinh {
         Date dateNow = new Date();
         Calendar cal = Calendar.getInstance();
         cal.setTime(dateNow);
-        String monthYear = cal.get(Calendar.MONTH) + 1 + "/" + cal.get(Calendar.YEAR);
+        String monthYear;
+        if(cal.get(Calendar.MONTH)+1<11){
+            monthYear = "0"+ (cal.get(Calendar.MONTH) + 1) + "/" + cal.get(Calendar.YEAR);
+        }else{
+            monthYear = (cal.get(Calendar.MONTH) + 1) + "/" + cal.get(Calendar.YEAR);
+        }
+
 
         double sum = 0;
         int count = 0;

@@ -32,7 +32,7 @@ public class Test {
 //            System.out.println(nv.getTen());
 //        }
 //       CongTyBH ct = new CongTyBH("công ty");
-       NhanVien nv = new NhanVienBienChe();
+//       NhanVien nv = new NhanVienBienChe();
 //       nv.nhapTT();
 //       nv.nhapLuong("4/2022");
 //       nv.inLuong("4/2022");
@@ -43,5 +43,11 @@ public class Test {
 //       nv.inTT();
 //        System.out.println(nv instanceof NhanVienThoiVu);
 //        System.out.println(HelpMethod.checkMonthYearInput("11/2022"));
+        String str = sc.nextLine();
+        if(HelpMethod.checkMonthYearInput(HelpMethod.formatMonthYear(str))){
+            System.out.println(HelpMethod.formatMonthYear(str));
+        }else{
+            System.out.println(false);
+        }
     }
 }
