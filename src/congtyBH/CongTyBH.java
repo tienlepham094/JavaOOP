@@ -83,7 +83,6 @@ public class CongTyBH {
     }
 
     // sua nhan vien
-    //sửa nhân viên
     public void suaNV(){
         if(pql.getDsNV().size()!=0){
             pql.inDS();
