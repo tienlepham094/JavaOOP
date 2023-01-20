@@ -211,8 +211,4 @@ public class CongTyBH {
     public String getTenCongTy() {
         return tenCongTy;
     }
-
-    public void setTenCongTy(String tenCongTy) {
-        this.tenCongTy = tenCongTy;
-    }
 }

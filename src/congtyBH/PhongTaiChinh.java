@@ -8,6 +8,7 @@ import java.util.*;
 
 public class PhongTaiChinh {
 
+    public PhongTaiChinh(){};
     // tinh luong tb tai thoi diem hien tai
     public double tinhLuongTB(ArrayList<NhanVien> dsNV){
         Date dateNow = new Date();

@@ -9,7 +9,6 @@ import java.util.Date;
 
 public class HelpMethod {
     private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
-    private static final SimpleDateFormat monthYearFormatter = new SimpleDateFormat("MM/yyyy");
     public static String formatDate(Date date){
         return dateFormatter.format(date);
     }
