@@ -21,7 +21,7 @@ public class NhanVienThoiVu extends NhanVien {
     public void nhapLuong(String monthYear){
         //nhập số hợp đồng bán được
         Scanner sc = new Scanner(System.in);
-        inTT();
+        inTTin();
         while(true){
             System.out.println("Nhập số hợp đồng bảo hiểm bán được: ");
             String soHopDongBan = sc.nextLine();
@@ -40,7 +40,7 @@ public class NhanVienThoiVu extends NhanVien {
     }
     public void inTTin(){
         super.inTT();
-        System.out.println("Loại nhân viên: Nhân viên hthời vụ");
+        System.out.println("Loại nhân viên: Nhân viên thời vụ");
     }
     public double getTIEN_BH() {
         return TIEN_BH;

@@ -30,6 +30,7 @@ public class Main {
                         break;
                     case 4:
                         cty.timKiem();
+                        break;
                     case 5:
                         cty.inDS();
                         break;

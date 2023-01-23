@@ -44,8 +44,9 @@ public class CongTyBH {
                     nv.inTT();
                     break;
                 case 2:
-                    // down casting
+                    // up casting
                     NhanVien nvien = new NhanVienThoiVu();
+                    // down casting
                     NhanVienThoiVu nvtv = (NhanVienThoiVu) nvien;
                     nvtv.nhapTT();
                     pql.themNV(nvtv);
