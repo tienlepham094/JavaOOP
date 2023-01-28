@@ -26,7 +26,7 @@ public class CongTyBH {
     }
 
     // them nhan vien
-    public void themNhanVien() throws ParseException {
+    public void themNV() throws ParseException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Chọn loại nhân viên bạn muốn thêm");
         System.out.println("1. Nhân viên biên chế");

@@ -20,7 +20,7 @@ public class Main {
                 int choice = Integer.parseInt(choiceStr);
                 switch (choice){
                     case 1:
-                        cty.themNhanVien();
+                        cty.themNV();
                         break;
                     case 2:
                         cty.xoaNV();
