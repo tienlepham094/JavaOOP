@@ -192,7 +192,7 @@ public class CongTyBH {
     // thống kê luong tại một thời điểm bất kì
     public void thongKeLuong(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Vui lòng nhập MM/YYYY mà bạn muốn nhập lương");
+        System.out.println("Vui lòng nhập MM/YYYY mà bạn muốn thống kê lương");
         String monthYear = sc.nextLine();
         if(HelpMethod.checkMonthYearInput(monthYear)){
             ptc.inLuongTheoThang(monthYear, pql.getDsNV());
