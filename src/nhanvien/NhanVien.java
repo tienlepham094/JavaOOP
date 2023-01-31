@@ -91,8 +91,8 @@ public abstract class NhanVien {
             System.out.println("Tên nhân viên: " + getTen());
             System.out.println("Lương tháng " + monthYear + " : " + HelpMethod.formatNumber(luong));
         }else{
-            System.out.println("[Error]: Chưa tồn tại dữ liệu về lương tháng " + monthYear);
-            System.out.println("[Error]: Vui lòng nhập thông tin trước khi tìm kiếm !");
+            System.out.println("Tên nhân viên: " + getTen());
+            System.out.println("Chưa có dữ liệu về lương tháng " + monthYear);
         }
     }
     public double getLuong(String monthYear){

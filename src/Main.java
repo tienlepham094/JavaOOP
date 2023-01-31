@@ -58,7 +58,7 @@ public class Main {
 
     }
     public static void showMenu(){
-        System.out.println("======================================================================");
+        System.out.println("\n======================================================================");
         System.out.println("*                    QUẢN LÝ CÔNG TY BẢO HIỂM                        *");
         System.out.println("======================================================================");
         System.out.println("*  1. Thêm nhân viên                                                 *");

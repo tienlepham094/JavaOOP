@@ -4,6 +4,7 @@
  */
 package congtyBH;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import nhanvien.NhanVien;
 import nhanvien.NhanVienBienChe;
 import nhanvien.NhanVienThoiVu;
@@ -195,10 +196,9 @@ public class CongTyBH {
         String monthYear = sc.nextLine();
         if(HelpMethod.checkMonthYearInput(monthYear)){
             ptc.inLuongTheoThang(monthYear, pql.getDsNV());
-        }else{
+        }else {
             System.out.println("[Error]: Nhập thông tin không hợp lệ");
         }
-
     }
     // in danh sach
     public void inDS(){
