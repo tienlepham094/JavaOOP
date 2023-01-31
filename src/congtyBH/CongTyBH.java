@@ -1,5 +1,5 @@
 /**
- * Method sua(), inDS(): Nguyen Van Anh 20200035
+ * Method sua(), inDS(): Nguyen Thi Van Anh 20200035
  * Other things: Le Pham Thuy Tien 20207633
  */
 package congtyBH;

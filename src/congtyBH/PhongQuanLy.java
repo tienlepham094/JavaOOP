@@ -1,6 +1,6 @@
 /**
  * Method timKiemCMT(), sua(), timKiem(): Le Pham Thuy Tien 20207633
- * Method them(), xoa(), inDS(): Nguyen Van Anh 20200035
+ * Method them(), xoa(), inDS(): Nguyen Thi Van Anh 20200035
  */
 package congtyBH;
 
@@ -14,13 +14,11 @@ import java.util.*;
 
 public class PhongQuanLy {
     private int soNV;
-    private PhongTaiChinh ptc;
     private ArrayList<NhanVien> dsNV;
 
     public PhongQuanLy() {
         this.soNV = 0;
         this.dsNV = new ArrayList<>();
-        this.ptc = new PhongTaiChinh();
     }
     // them, sua, xoa nhan vien
     public void themNV(NhanVien nv){
@@ -94,18 +92,6 @@ public class PhongQuanLy {
 
     public int getSoNV() {
         return soNV;
-    }
-
-    public void setSoNV(int soNV) {
-        this.soNV = soNV;
-    }
-
-    public PhongTaiChinh getPtc() {
-        return ptc;
-    }
-
-    public void setPtc(PhongTaiChinh ptc) {
-        this.ptc = ptc;
     }
 
     public ArrayList<NhanVien> getDsNV() {
